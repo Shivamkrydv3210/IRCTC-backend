@@ -21,12 +21,6 @@ This project is a **Railway Management System** designed to simulate key functio
 
 ## Project Setup
 
-### Prerequisites
-
-1. [Node.js](https://nodejs.org/en/) (v14 or later recommended)
-2. [MySQL](https://www.mysql.com/) installed and running
-3. [Postman](https://www.postman.com/) or a similar tool for API testing (optional but recommended)
-
 ### Environment Variables
 
 Create a `.env` file in the project root with the following variables:
@@ -57,7 +51,7 @@ git clone https://github.com/ujjawalkumar131/IRCTC_API_WorkIndia.git
 cd irctc-api
 cd backend
 ```
-Install dependencies:
+*Install dependencies:**
 
 ```bash
 
@@ -110,4 +104,115 @@ CREATE TABLE bookings (
 
 npm start
 ```
-By default, the server will run on http://localhost:3000.
+By default, the server will run on `http://localhost:3000`.
+
+# API Endpoints
+All routes are prefixed by /api.
+
+**Register User**
+
+* Method: `POST`
+URL: `/api/auth/register`
+Body (JSON):
+```json
+
+{
+  "username": "john",
+  "password": "secret123",
+  "role": "user"
+}
+```
+**Login User**
+
+Method: `POST`
+URL: `/api/auth/login`
+Body (JSON):
+```json
+{
+  "username": "john",
+  "password": "secret123"
+}
+```
+Response:
+```json
+
+{
+  "token": "<JWT_TOKEN>"
+}
+```
+This token is required for user-protected routes.
+# Add New Train (Admin)
+
+Method: `POST`
+URL: `/api/trains`
+Headers:
+```makefile
+
+x-api-key: <ADMIN_API_KEY>
+Content-Type: application/json
+```
+Body (JSON):
+```json
+{
+  "name": "SuperFast Express",
+  "source": "CityA",
+  "destination": "CityB",
+  "totalSeats": 100
+}
+```
+# Get Trains by Route
+
+Method: `GET`
+URL: `/api/trains?source=CityA&destination=CityB`
+Query Parameters: `source` and `destination` (both required).
+Response:
+```json
+{
+  "trains": [
+    {
+      "id": 1,
+      "name": "SuperFast Express",
+      "source": "CityA",
+      "destination": "CityB",
+      "totalSeats": 100,
+      "availableSeats": 100
+    }
+  ]
+}
+```
+# Book a Seat
+
+Method:` POST`
+URL: `/api/bookings`
+Headers:
+```pgsql
+Authorization: Bearer <JWT_TOKEN>
+Content-Type: application/json
+```
+Body (JSON):
+```json
+{
+  "trainId": 1
+}
+```
+# Get Booking Details
+
+Method: `GET`
+URL: `/api/bookings/:bookingId`
+Headers:
+```makefile
+
+Authorization: Bearer <JWT_TOKEN>
+```
+Response (example):
+```json
+
+{
+  "booking": {
+    "id": 1,
+    "user_id": 2,
+    "train_id": 1,
+    "bookingTime": "2025-02-10 12:30:00"
+  }
+}
+```

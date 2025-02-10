@@ -215,3 +215,5 @@ Response (example):
   }
 }
 ```
+# Results
+![image](https://github.com/user-attachments/assets/3a8f82c0-3b78-4463-add0-ffcdc65d69ed)

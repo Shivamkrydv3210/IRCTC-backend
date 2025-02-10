@@ -25,7 +25,7 @@ This project is a **Railway Management System** designed to simulate key functio
 Create a `.env` file in the project root with the following variables:
 
 ```bash
-PORT=3000
+PORT=5000
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=yourpassword
@@ -103,7 +103,7 @@ CREATE TABLE bookings (
 
 npm start
 ```
-By default, the server will run on `http://localhost:3000`.
+By default, the server will run on `http://localhost:5000`.
 
 # API Endpoints
 All routes are prefixed by /api.
@@ -116,7 +116,7 @@ All routes are prefixed by /api.
 ```json
 
 {
-  "username": "john",
+  "username": "UserA,
   "password": "secret123",
   "role": "user"
 }
@@ -128,7 +128,7 @@ All routes are prefixed by /api.
 * Body (JSON):
 ```json
 {
-  "username": "john",
+  "username": "UserA",
   "password": "secret123"
 }
 ```
@@ -154,15 +154,15 @@ Body (JSON):
 ```json
 {
   "name": "SuperFast Express",
-  "source": "CityA",
-  "destination": "CityB",
+  "source": "Delhi",
+  "destination": "Mumbai",
   "totalSeats": 100
 }
 ```
 # Get Trains by Route
 
 * Method: `GET`
-* URL: `/api/trains?source=CityA&destination=CityB`
+* URL: `/api/trains?source=Delhi&destination=Mumbai`
 * Query Parameters: `source` and `destination` (both required).
 Response:
 ```json
@@ -171,8 +171,8 @@ Response:
     {
       "id": 1,
       "name": "SuperFast Express",
-      "source": "CityA",
-      "destination": "CityB",
+      "source": "Delhi",
+      "destination": "Mumbai",
       "totalSeats": 100,
       "availableSeats": 100
     }
@@ -232,6 +232,7 @@ Response (example):
 ![image](https://github.com/user-attachments/assets/eabb8ffb-6cc3-4cb5-8d99-3dc400a894f6)
 
 * Get specfic booking details
-![image](https://github.com/user-attachments/assets/b7051907-b27d-4727-8cf5-d563e731fbfd)
+![image](https://github.com/user-attachments/assets/8c222b26-1509-41f5-b302-cddeb3232fce)
+
 
 

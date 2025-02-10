@@ -115,7 +115,7 @@ All routes are prefixed by /api.
 ```json
 
 {
-  "username": "UserA,
+  "username": "UserA",
   "password": "secret123",
   "role": "user"
 }

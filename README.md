@@ -1,2 +1,9 @@
+## Tech Stack
 
-[README.md](https://github.com/user-attachments/files/18739879/README.md)
+**Node.js** - Server environment
+
+**Express.js** - Web application framework
+
+**MySQL** - Database
+
+**JWT** (JSON Web Tokens) - For securing endpoints

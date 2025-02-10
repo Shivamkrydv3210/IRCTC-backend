@@ -216,4 +216,22 @@ Response (example):
 }
 ```
 # Results
-![image](https://github.com/user-attachments/assets/3a8f82c0-3b78-4463-add0-ffcdc65d69ed)
+* Register a New User 
+![image](https://github.com/user-attachments/assets/7274f200-f6cc-4413-a90d-78dce6929f32)
+
+* Login a User
+![image](https://github.com/user-attachments/assets/7f1f9e83-5c55-4630-8cbe-ebc2d7b37231)
+
+* Get seat availability
+![image](https://github.com/user-attachments/assets/3584445e-a69e-4c3c-a2c6-76e8bb4e21c8)
+
+* Book a Seat
+![image](https://github.com/user-attachments/assets/5dda21b0-130e-4461-855b-9278a72e2d5d)
+
+* Add a new train (Admin Only)
+![image](https://github.com/user-attachments/assets/eabb8ffb-6cc3-4cb5-8d99-3dc400a894f6)
+
+* Get specfic booking details
+![image](https://github.com/user-attachments/assets/b7051907-b27d-4727-8cf5-d563e731fbfd)
+
+

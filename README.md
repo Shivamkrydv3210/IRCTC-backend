@@ -15,7 +15,6 @@ This project is a **Railway Management System** designed to simulate key functio
 - **Role-Based Access** (admin/user)
 - **Error Handling** and input validation
 
-> **When in doubt**, we make a plausible assumption. For instance, we assume that seat bookings only track the number of seats booked (no seat selection UI), and concurrency is handled through database transactions.
 
 ---
 
@@ -112,8 +111,8 @@ All routes are prefixed by /api.
 **Register User**
 
 * Method: `POST`
-URL: `/api/auth/register`
-Body (JSON):
+* URL: `/api/auth/register`
+* Body (JSON):
 ```json
 
 {
@@ -124,9 +123,9 @@ Body (JSON):
 ```
 **Login User**
 
-Method: `POST`
-URL: `/api/auth/login`
-Body (JSON):
+* Method: `POST`
+* URL: `/api/auth/login`
+* Body (JSON):
 ```json
 {
   "username": "john",
@@ -143,9 +142,9 @@ Response:
 This token is required for user-protected routes.
 # Add New Train (Admin)
 
-Method: `POST`
-URL: `/api/trains`
-Headers:
+* Method: `POST`
+* URL: `/api/trains`
+* Headers:
 ```makefile
 
 x-api-key: <ADMIN_API_KEY>
@@ -162,9 +161,9 @@ Body (JSON):
 ```
 # Get Trains by Route
 
-Method: `GET`
-URL: `/api/trains?source=CityA&destination=CityB`
-Query Parameters: `source` and `destination` (both required).
+* Method: `GET`
+* URL: `/api/trains?source=CityA&destination=CityB`
+* Query Parameters: `source` and `destination` (both required).
 Response:
 ```json
 {
@@ -182,9 +181,9 @@ Response:
 ```
 # Book a Seat
 
-Method:` POST`
-URL: `/api/bookings`
-Headers:
+* Method:` POST`
+* URL: `/api/bookings`
+* Headers:
 ```pgsql
 Authorization: Bearer <JWT_TOKEN>
 Content-Type: application/json
@@ -197,9 +196,9 @@ Body (JSON):
 ```
 # Get Booking Details
 
-Method: `GET`
-URL: `/api/bookings/:bookingId`
-Headers:
+* Method: `GET`
+* URL: `/api/bookings/:bookingId`
+* Headers:
 ```makefile
 
 Authorization: Bearer <JWT_TOKEN>

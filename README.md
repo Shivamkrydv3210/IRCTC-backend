@@ -47,7 +47,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/Shivamkrydv3210/IRCTC-backend.git
-cd IRCTC-backend-main
+cd IRCTC-backend
 ```
 *Install dependencies:**
 

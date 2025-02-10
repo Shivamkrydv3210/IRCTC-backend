@@ -46,7 +46,7 @@ API_KEY=your_admin_api_key
 Clone the repository:
 
 ```bash
-git clone https://github.com/ujjawalkumar131/IRCTC_API_WorkIndia.git
+git clone [https://github.com/ujjawalkumar131/IRCTC_API_WorkIndia.git](https://github.com/Shivamkrydv3210/IRCTC-backend.git)
 cd IRCTC-backend-main
 ```
 *Install dependencies:**

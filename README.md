@@ -47,8 +47,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/ujjawalkumar131/IRCTC_API_WorkIndia.git
-cd irctc-api
-cd backend
+cd IRCTC-backend-main
 ```
 *Install dependencies:**
 
